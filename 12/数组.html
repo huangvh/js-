@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = new Array();
+        console.log(a);
+        var b = new Array(3);
+        console.log(b);
+        var c = new Array("语文","数学","英语");
+        console.log(c);
+        var d = new Array(2,"字符串",true,new Array(3,2),null,undefined);
+        console.log(d);
+        var e = [];
+        console.log(e);
+        var f = ["语文","数学","英语"]
+        console.log(f)
+        console.log(f[5])
+        f[5]="美术"
+        console.log(f)
+
+        var r =c.push(3)
+        console.log(c)
+        console.log(r)
+        r =c.pop()
+        console.log(c)
+        console.log(r)
+
+        var g =[1,50,12,3,7,20];
+        console.log(g);
+        r =g.reverse();
+        console.log(g);
+        console.log(r);
+
+        r=g.sort();
+        console.log(g);
+        console.log(r);
+        r =g.sort(function(a,b){
+            return a-b
+        });
+        console.log(g);
+    </script>
+</body>
+</html>

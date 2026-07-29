@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcu(){
+            var numb1 =document.num1.value;
+             var numb2 =document.num2.value;
+        }
+        if(numb1 !='' && numb2 !=""){
+            if(parseFloat(numb2)<0){
+                alert('购买数量不能小于0！\n请重填')
+            }
+            var total = numb1*numb2;
+            var select= document.calc.pay.value;
+            var grade=1;
+            switch(parseInt(select)){
+                case 1:
+                grade=0.6;
+                break;
+                case 2:
+                grade =0.7;
+                break;
+                case 3:
+                grade=0.8
+                break;
+                case 4:
+                grade=0.9
+                break;
+                default: 
+                alert('请重新选着支付方式！')
+                return;
+            }
+            total=total*grade;
+            document.calc.result.value =total;
+            alert('您享受了'+grade*10+"折扣优惠");
+
+        }
+        if(total> 500 && total<=1000){
+            alert("购买总价超过500\n支付时将赠送螺旋桨一套");
+
+        }else if(total> 1000 && total<=2000){
+            alert("购买总价超过1000\n支付时将赠送螺旋桨两套");
+        }else if(total> 1000 && total<=2000){
+            alert("购买总价超过1000\n支付时将赠送螺旋桨三套");
+        }
+        else{
+            alert('购买数量或者购买价格没有填写\n请重新输入')
+        }
+    </script>
+</head>
+<body>
+    <form name="calc">
+        <p>
+        <font size="4">玩具直升飞机在线订购</font>
+        <img src="" alt=""><br>
+        购买价格: <input type="text" name="num1" value="180" size="15"><br>
+        购买数量: <input type="text" name="num2" size="15">  <br>
+         支付方式:
+         <select name="pay" >
+            <option value="0">请选择支付方式</option>
+            <option value="1">银行转账</option>
+            <option value="2">电话支付</option>
+            <option value="3">邮政汇款</option>
+            <option value="4">现金支付</option>
+            
+         </select> <br>
+            预估总价: <input type="text" name="result" size="15">
+        </p>
+        <p>
+            <input type="button" name="getAnswer" value="计算看看" onclick="calcu()">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判断闰年</title>
+</head>
+<body>
+    <script>
+        var year=prompt("请输入一个年份","2026")
+        var result;
+       if(year){
+            result=((year % 4==0 && year % 100 !=0)||year % 400==0?
+             year  + "是闰年":
+            year + "不是闰年")
+        alert("年份是"+result)
+       }else{
+        
+        alert("你拒绝了回答")
+       }
+
+       
+     
+
+    </script>
+</body>
+</html>

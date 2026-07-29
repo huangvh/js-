@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = new Array();
+        a[0] =["建设目标","建设思路","培养队伍"]
+        a[1]= [];
+        a[2]=["负责人","队伍结构","任课老师"]
+        console.log(a)
+        var b =new Array(
+             new Array("建设目标","建设思路","培养队伍"),
+             new Array(),
+             new Array("负责人","队伍结构","任课老师")
+        )
+        console.log(b)
+        var c =  [
+            ["建设目标","建设思路","培养队伍"],
+            [],
+            ["负责人","队伍结构","任课老师"]
+        ]
+        console.log(c)
+
+        document.write(c[0][1],"<br>");
+        document.write(c[0],"<br>");
+        document.write(c[1],"<br>");
+        document.write(c[2],"<br>");
+        document.write(c.length,"<br>");
+        document.write(c[0].length,"<br>");
+        document.write(c[1].length,"<br>");
+        document.write(c[2].length,"<br>");
+        for(var i=0;i<c.length;i++){
+            //c[i]表示执行第i行第一组数组
+            for(var j =0;j<c[i].length;j++){
+                    document.write(c[i][j],"<br>")
+                    document.write("c["+i+']['+j+"]",c[i][j],"<br>")
+            }
+
+        }
+    </script>
+</body>
+</html>

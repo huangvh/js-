@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #sDiv{
+        border: solid 1px;
+        text-align: center;
+        width: 200px;
+        background-color: lavenderblush;
+        border-radius: 15px;
+    }
+    #t{
+        border: solid 1px;
+          width: 150px;
+          border-radius: 15px;
+          font-size: 20px;
+          padding: 0 3px;
+          margin: 10px 0;
+    }
+    input[type=button]{
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        margin: 2px;
+    }
+    #edu{
+        width: 150px;
+        font-size: 26px;
+        padding-bottom: 30px;
+    }
+</style>
+<body>
+    <div id="sDiv">
+        <input type="text" id="t " value=""/><br />
+        <input type="button"  value="1" onclick="calCulate(this.value)"/>
+        <input type="button"  value="2" onclick="calCulate(this.value)"/>
+        <input type="button"  value="3" onclick="calCulate(this.value)"/>
+        <input type="button"  value="4" onclick="calCulate(this.value)"/><br />
+    <input type="button"  value="5" onclick="calCulate(this.value)"/>
+    <input type="button"  value="6" onclick="calCulate(this.value)"/>
+    <input type="button"  value="7" onclick="calCulate(this.value)"/>
+    <input type="button"  value="8" onclick="calCulate(this.value)"/><br />
+    <input type="button"  value="9" onclick="calCulate(this.value)"/>
+    <input type="button"  value="0" onclick="calCulate(this.value)"/>
+    <input type="button"  value="." onclick="calCulate(this.value)"/>
+    <input type="button"  value="C" onclick="calCulate(this.value)"/><br />
+    <input type="button"  value="+" onclick="calCulate(this.value)"/>
+    <input type="button"  value="-" onclick="calCulate(this.value)"/>
+    <input type="button"  value="*" onclick="calCulate(this.value)"/>
+    <input type="button"  value="/" onclick="calCulate(this.value)"/><br />
+    <input type="button"  id="edu" value="=" onclick="calCulate(this.value)"/><br />
+
+
+
+        </div>
+</body>
+<script>
+        function calCulate(val){
+            var txt = document.getElementById("t");
+            switch(val){
+                case "=":
+                txt.value=eval(txt.value);
+                break;
+                case "C" :
+                    txt.value=""
+                    break;
+                    default:
+                        txt.value=txt.value+val;
+                        break;
+            }
+        }
+    </script>
+</html>

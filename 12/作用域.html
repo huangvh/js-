@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    document.write("全局变量和局部变量的展示<br>")
+    var a=1;
+    document.write("函数外a",a,'<br>')
+    function fun1(){
+        var a=2;
+        a++;
+        var b=4;
+
+        document.write("函数内a",a,'<br>')
+        document.write("函数内b",b,'<br>')
+    }
+    fun1();
+  //  document.write("函数外",b,'<br>')
+  document.write("函数外a",a,'<br>')
+  function fun2(){
+    a++
+    c =5;
+    document.write("函数内a二",a,'<br>')
+    document.write("函数内c二",c,'<br>')
+  }
+  fun2();
+  document.write("函数外a",a,'<br>')
+  document.write("函数外c",c,'<br>')
+</script>
+</html>

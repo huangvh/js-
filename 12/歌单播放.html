@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body,div,ul,li,h2{
+				/* 外边距 */
+				margin: 0;
+				/* 内边距 */
+				padding: 0;
+			}
+			
+			body{
+				font: 12px/1.5 Tahoma;
+			}
+			ul{
+				/* 去掉序列圆点 */
+				list-style-type: none;
+			}
+			#outer{
+				/* 加个外边距 宽度200 自定义颜色 */
+				border: 1px  solid #7c84cc;
+				width: 200px;
+				margin: 10px auto;
+			}
+			#outer h2{
+				border: 1px solid;
+				border-color:red blue green yellow;
+				/* 字体大小 */
+				font-size: 14px;
+				/* 加粗 */
+				font-weight: 100;
+				/* 高度 */
+				height: 30px;
+				/* 行高 */
+				line-height: 30px;
+				/* 左内边距 */
+				padding-left: 10px;
+				/* 字体颜色 */
+				color: rgb(27, 224, 224);
+				/* 背景颜色 */
+				background-color: aquamarine;
+				/* 背景图片  没有重复no-repeat*/ 
+				background: #ca38d7 url(img/b.png) 150px 5px no-repeat;
+			}
+			#outer ul{
+				/* 上边框 */
+				border-top: 1px solid red;
+				
+				/* display: block; */
+			}
+			#outer li{
+				 height: 25px;
+				 line-height: 25px;
+				 
+			}
+			#outer a{
+				/* 设计下划线 */
+				text-decoration: none;
+				/* 内边距 */
+				padding: 0 10px;
+				color: green;
+				background: beige;
+				/* 是控制元素显示模式和布局方式的核心属性 */
+				display: block;
+			}
+			/* 标签处于a标签的时候变成白色 */
+			#outer a:hover{
+				background-color: white;
+				/* 用于设置文本装饰效果的属性，通过指定下划线、删除线等样式修饰文本内容 */
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="outer">
+			<h2 id="bt">播放列表</h2>
+			<ul id="list">
+				<li><a href="">春天的故事</a></li>
+				<li><a href="">我的中国心</a></li>
+				<li><a href="">在希望的田野上</a></li>
+			</ul>
+		</div>
+		
+	</body>
+	<script>
+		//DOM中通过指定id属性值获取对应元素对象的方法
+		var oH2= document.getElementById("bt");
+		var oUl= document.getElementById("list")
+		// 鼠标点击时改变函数
+		oH2.onclick =function(){
+			// oUl.style.display="none";
+			if(oUl.style.display=="none"){
+				oUl.style.display="block";
+			}else{
+				oUl.style.display="none";
+			}
+		}
+	</script>
+</html>

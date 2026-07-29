@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务实现</title>
+</head>
+<body>
+<script>
+			var massage=confirm("输入提示框")
+			if(massage==true){
+				
+			document.write('<p id="demo" onclick="ClickMe()">输入第一次内容</p>')	
+			}else{
+				alert("取消的内容")
+			}
+			function ClickMe(){ 
+				var str ="改变第一次内容";
+				//得到第一次的内容位置用innerHTML更改内容
+				document.getElementById("demo").innerHTML = str;
+			}
+		</script>
+</body>
+</html>

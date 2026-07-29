@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input name="btn" type="button" value="点击" onclick="study()">
+    <input name="btn" type="button" value="点击" onclick="study1()">
+    <input name="btn" type="button" value="点击" onclick="study3(5)">
+    <input name="btn" type="button" value="点击" onclick="study3(prompt('请输入次数',''))">
+    <p id="par"></p>
+</body>
+<script>
+    function study(){
+        for(var i = 0;i<5;i++){
+            document.write("<h4>欢迎学习</h4>");
+        }
+    }
+    function study1(){
+        document.getElementById("par").innerHTML="<h4>欢迎学习</h4>"
+    }
+    function study3(count){
+        for(var i = 0;i< count;i++){
+            document.write("<h4>欢迎学习</h4>");
+        }
+    }
+    function sum(a,b){
+        var c =a + b;
+        return c;
+    }
+    var x= sum(2,3);
+    document.write(x)
+    //   study();
+//   study3(5);
+
+// var n =prompt('请输入次数','2')
+// document.write('n=',n,'<br>')
+// study3(n)
+
+// study3(prompt('请输入次数',''));
+</script>
+</html>

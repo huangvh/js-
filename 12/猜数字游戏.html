@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #start{
+            margin-top: 19px;
+            width: 142px;
+            height: 56px;
+            cursor: pointer;
+            background: url()no-repeat;
+        }
+        p{
+            color: green;
+            font-size: 28px;
+            font-weight: 900;
+        }
+        #info{
+
+            color:blue ;
+        }
+    </style>
+</head>
+<body>
+    <p>进入数字游戏&dArr;</p>
+    <div id="info">请输入1到100之间的数字</div>
+    <input id="myguess" /><br>
+    <button id="start" onclick="checknum()">确定按钮</button>
+    <script>
+        var num=Math.floor(Math.random()*100+1)  
+        function checknum(){
+            var guess = document.getElementById("myguess").value;
+            if(guess==num){
+                document.getElementById("info").innerHTML="恭喜你才对了，幸运数字是"+num;
+            }else if(guess <num){
+                document.getElementById("info").innerHTML="您猜的数字"+guess+"有些小了";
+            }else{
+                document.getElementById("info").innerHTML="您猜的数字"+guess+"有些大了";
+            }
+        }
+          </script>
+</body>
+</html>

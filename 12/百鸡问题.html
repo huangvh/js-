@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百鸡问题</title>
+</head>
+<body>
+    <script>
+        var k =0
+        for(var i =0;i<=100;i++){
+            for(var j=0;j<=100;j++){
+                k=100-j-i
+                if(5*i+3*j+k/3==100&&k>=0){
+                    document.write("公鸡",i,"母鸡",j,"小鸡",k)
+                }
+                }
+        }
+    </script>
+</body>
+</html>

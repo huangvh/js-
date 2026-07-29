@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求pi近视值</title>
+</head>
+<body>
+    <script>
+        var term=1
+        var i=1
+        var sum=0
+        var sign=1
+        while(term>=1e-3){
+            term=1/i
+            sum+=sign*term
+            document.write("第",i,"项",sign*term,"<br>")
+            sign=-sign
+            i+=2
+        }
+        document.write(4*sum)
+    </script>
+</body>
+</html>
